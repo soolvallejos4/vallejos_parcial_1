@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallejos Sol PWA</title>
+    <script src="https://kit.fontawesome.com/12a84aec64.js" crossorigin="anonymous"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center ">
+      <header>
+        <div class="row mb-3 mt-4">
+           <div class="col-12">
+            <h1>App Clima</h1>
+           </div>
+        </div>
+        <!-- encabezado general -->
+        </header>
+
+       <!--  pedir ciudad al usuario -->
+        <section class="pedir-ciudad">
+            <div class="row mt-3">
+                <div class="col-12">
+                   <p id="ciudad-invalida">Escriba un nombre de ciudad válido.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                   <input type="text" placeholder="Inserte su ciudad" spellcheck="false" class="py-4" required> <!-- que no busque si hay error de ortografia -->
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 d-flex justify-content-center">
+                   <button type="submit" class="mb-3 mt-3">Buscar</button>
+                </div>
+            </div>
+        </section>
+        <!--  pedir ciudad al usuario -->
+
+
+    <!--     datos del clima -->
+        <div id="contenedor-clima">
+            <section id="clima d-flex flex-column justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-12 localizacion d-flex justify-content-center align-items-center text-center mt-5">
+                        
+                      <h2 id="texto-ciudad">Ciudad</h2>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-6">
+                       
+                        <img src="" alt="" id="icono">
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-12 temperatura">
+                                <p id="temp-actual">-</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row ">
+                    <div class="col-12 text-center" id="tipo-clima" >
+                        -
+                    </div>
+                </div>
+                <div class="row mt-5 max-min">   
+                    <div class="col-6 min d-flex">
+                        <div class="row">
+                            <div class="col-3">
+                                <i class="fa-solid fa-temperature-arrow-down"></i>
+                            </div>
+                            <div class="col-9 d-flex flex-column">
+                                <div>
+                                    <p id="temp-max">-</p>
+                                    <p>Temperatura Máxima</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 min d-flex justify-content-end">
+                        <div class="row">
+                            <div class="col-3">
+                                <i class="fa-solid fa-temperature-arrow-down"></i>
+                            </div>
+                            <div class="col-9 d-flex flex-column">
+                                <div>
+                                    <p id="temp-min">-</p>
+                                </div>
+                                <p>Temperatura Mínima</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="otros-datos my-5">
+                    
+                    <div class="row mt-3">   
+                        <div class="col-4 min d-flex">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="./img/humedad.png" alt="" width="45px">
+                                </div>
+                                <div class="col-9 d-flex flex-column">
+                                    <div>
+                                       <p id="humedad"></p>
+                                    </div>
+                                    <p>Humedad</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 min d-flex justify-content-end">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="./img/presion.png" alt="" width="45px">
+                                </div>
+                                <div class="col-9 d-flex flex-column">
+                                    <div>
+                                        <p id="presion"></p>
+                                    </div>
+                                    <p>Presión</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 min d-flex justify-content-end">
+                            <div class="row">
+                                <div class="col-3">
+                                    <i class="fa-solid fa-wind"></i>
+                                </div>
+                                <div class="col-9 d-flex flex-column">
+                                    <div>
+                                      <p id="viento"></p>
+                                    </div>
+                                    <p>Viento</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+               </div> <!-- fin otros datos -->
+                
+    
+    
+    
+        
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button type="submit" class="mb-3 mt-3" id="volver-ciudad">Cambiar Ciudad</button>
+                    
+                </div>
+            </div>
+        
+    
+            </section>  
+        </div>
+      
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

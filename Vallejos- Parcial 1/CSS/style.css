@@ -1,0 +1,115 @@
+/*GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+/*PALETA DE COLORES*/
+/*https://coolors.co/palette/ffffff-00171f-003459-007ea7-00a8e8*/
+
+
+/*config general del documento*/
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #00A8E8; 
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.361);
+    border-radius: 7px;
+   width: 500px;
+}
+
+.container header{
+    color:#00A8E8;
+    font-weight: 500;
+    border-bottom:1px solid #bfbfbf ;
+}
+h1{
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+h2 , #tipo-clima {
+    font-family: 'Amatic SC', cursive;
+    font-size: 400;
+    font-size: 2em;
+    
+}
+h2{
+    background-color: #003459;
+    color: white;
+    padding: 0.1em 0.5em;
+    border-radius: 1em;
+}
+.ciudad{
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+#ciudad-invalida{
+    display: none;
+    color: white;
+    background-color: red;
+    padding: 1em;
+    transition: 1s;
+    transform:scale(1)
+}
+
+.pedir-ciudad :where(input, button) {
+    width: 100%;
+    height: 2em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 0.3em;
+}
+.pedir-ciudad input{
+    text-align: center;
+    border: 1px solid #bfbfbf;
+}
+button {
+    width: 100%;
+    height: 2em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 0.3em;
+    color: whitesmoke;
+    background-color: #007EA7;   
+}
+
+
+/*datos del clima*/
+
+.otros-datos{
+    width: 100%;
+    border-top: 1px solid #bfbfbf;
+}
+.active .otros-datos{
+    display: flex;
+}
+.temperatura {
+    font-size: 3.5em;
+    font-weight: 500;
+}
+
+.localizacion {
+    font-size: 2em;
+}
+.otros-datos i , .max-min i{
+    color: #007EA7;
+    font-size: 2em;
+}
+.otros-datos p{
+    font-size: 0.8em;
+}
+#contenedor-clima{
+    display: none;
+   
+}
+#contenedor-clima img{
+    width: 100%;
+}
+
