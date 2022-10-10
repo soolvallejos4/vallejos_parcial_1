@@ -29,6 +29,7 @@ const clima = (localizacion) => {
     let pedirCiudad = document.querySelector('.pedir-ciudad');
     
     let botonVolverCiudad = document.getElementById('volver-ciudad');
+    let iconoHome = document.getElementById('iconoHome')
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${localizacion}&units=metric&appid=${APIKEY}&lang=es`) /*POR QUE USO UNITS= METRIC: SEGUN LA DOCUMENTACION :For temperature in Celsius use units=metric*/
     /*todo me lo devuelve en ingles, entonces tengo que pasarlo al espaniol :You can use the lang parameter to get the output in your language.
@@ -120,14 +121,29 @@ Translation is applied for the city name and description fields.*/
      
 
     })
-    function volverCiudad () {
+    /* function volverCiudad () {
         botonVolverCiudad.addEventListener('click', () => {
             contenedorClima.style.display = 'none'
             pedirCiudad.style.display='block'
             body.style.backgroundImage = "none"
         })
     }
-    volverCiudad()
+    volverCiudad() */
+    
+    function ocultarCiudad(){
+            contenedorClima.style.display = 'none'
+            pedirCiudad.style.display='block'
+            body.style.backgroundImage = "none"
+    }
+
+    botonVolverCiudad.addEventListener('click', (e) => {
+        ocultarCiudad()
+    })
+    iconoHome.addEventListener('click', (e) => {
+        ocultarCiudad()
+    })
+
+
     .catch(err => console.log(err))
     inputCiudad.value = "";
     

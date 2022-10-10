@@ -9,21 +9,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
     <script src="script.js"></script>
+    <!--Icono de la web-->
+    <link rel="shortcut icon" href="./img/icono-app.png" type="image/x-icon">
     
 </head>
 <body>
     <div class="container d-flex flex-column justify-content-center align-items-center ">
       <header>
         <div class="row mb-3 mt-4">
-           <div class="col-12">
-            <h1>App Clima</h1>
+           <div class="col-12 d-flex justify-content-center align-items-center">
+           <a href="#" id="iconoHome"> <img src="./img/icono-app.png" alt="icono-ciudad" class="logo"></a> 
+           <h1>App Clima</h1>
            </div>
         </div>
         <!-- encabezado general -->
         </header>
 
        <!--  pedir ciudad al usuario -->
-        <section class="pedir-ciudad">
+        <section class="pedir-ciudad" id="pedir-ciudad">
             <div class="row mt-3">
                 <div class="col-12">
                    <p id="ciudad-invalida">Escriba un nombre de ciudad válido.</p>
@@ -106,7 +109,7 @@
                         <div class="col-4 min d-flex">
                             <div class="row">
                                 <div class="col-3">
-                                    <img src="./img/humedad.png" alt="" width="45px">
+                                    <img src="./img/humedad.png" alt="">
                                 </div>
                                 <div class="col-9 d-flex flex-column">
                                     <div>
@@ -116,10 +119,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4 min d-flex justify-content-end">
+                        <div class="col-4 min d-flex justify-content-end presion">
                             <div class="row">
                                 <div class="col-3">
-                                    <img src="./img/presion.png" alt="" width="45px">
+                                    <img src="./img/presion.png" alt="">
                                 </div>
                                 <div class="col-9 d-flex flex-column">
                                     <div>
@@ -129,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4 min d-flex justify-content-end">
+                        <div class="col-4 min d-flex justify-content-end viento">
                             <div class="row">
                                 <div class="col-3">
                                     <i class="fa-solid fa-wind"></i>
