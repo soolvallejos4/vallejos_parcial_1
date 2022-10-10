@@ -121,14 +121,7 @@ Translation is applied for the city name and description fields.*/
      
 
     })
-    /* function volverCiudad () {
-        botonVolverCiudad.addEventListener('click', () => {
-            contenedorClima.style.display = 'none'
-            pedirCiudad.style.display='block'
-            body.style.backgroundImage = "none"
-        })
-    }
-    volverCiudad() */
+
     
     function ocultarCiudad(){
             contenedorClima.style.display = 'none'
@@ -158,26 +151,6 @@ boton.addEventListener('click' , () => {
 })
 }
 pedirClima()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 });

@@ -115,7 +115,9 @@ button {
     display: none;
    
 }
-#contenedor-clima img{
+#contenedor-clima {
     width: 100%;
 }
-
+.icono-clima{
+    width: 100%;
+}
