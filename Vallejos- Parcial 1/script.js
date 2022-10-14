@@ -149,7 +149,9 @@ const pedirClima = () => {
 boton.addEventListener('click' , () => {
     clima(inputCiudad.value)
 })
+
 }
+
 pedirClima()
 
 
