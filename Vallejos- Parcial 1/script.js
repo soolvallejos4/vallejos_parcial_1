@@ -58,7 +58,7 @@ Translation is applied for the city name and description fields.*/
             presion.innerHTML = `${data.main.pressure} hPa`;
         
             // Metric: Celsius, , el viento denominado en metric me da Metric: meter/sec,
-            viento.innerHTML = Math.floor (data.wind.speed * 3.6 ) + 'Km/h'
+            viento.innerHTML = Math.floor (data.wind.speed * 3.6 ) + 'Km/h' //multiplico por 3.6 ya que lo recibo en metros por segundo
             
          
 
