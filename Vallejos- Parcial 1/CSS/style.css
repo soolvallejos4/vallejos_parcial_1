@@ -22,7 +22,8 @@ body {
 .container {
     background-color: rgba(255, 255, 255, 0.361);
     border-radius: 7px;
-   width: 500px;
+    width: 600px;
+  
 }
 
 .container header{
@@ -120,4 +121,20 @@ button {
 }
 .icono-clima{
     width: 100%;
+}
+.presion img , .humedad img {
+    width: 40px;
+}
+
+@media screen and (max-width:540px){
+    .container{
+        width: 320px;
+    }
+    .presion img , .humedad img {
+        width: 30px;
+    }
+    .otros-datos i {
+
+        font-size: 1.5em;
+    }
 }
