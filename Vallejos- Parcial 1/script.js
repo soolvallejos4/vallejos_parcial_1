@@ -29,6 +29,8 @@ addEventListener("DOMContentLoaded", (event) => {
     let botonVolverCiudad = document.getElementById("volver-ciudad");
     let iconoHome = document.getElementById("iconoHome");
 
+    let mapa = document.getElementById("mapa")
+
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${localizacion}&units=metric&appid=${APIKEY}&lang=es`
     ) /*POR QUE USO UNITS= METRIC: SEGUN LA DOCUMENTACION :For temperature in Celsius use units=metric*/
@@ -56,6 +58,13 @@ Translation is applied for the city name and description fields.*/
           tempMin.innerHTML = Math.ceil(data.main.temp_min) + "°C";
           humedad.innerHTML = `${data.main.humidity} %`;
           presion.innerHTML = `${data.main.pressure} hPa`;
+          mapa.innerHTML = ` <iframe
+          style="display: block; width: 100%;"
+          src="https://maps.google.com/maps?q=${data.coord.lat},${data.coord.lon}&hl=es;z=14&amp;output=embed"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>`
 
           // Metric: Celsius, , el viento denominado en metric me da Metric: meter/sec,
           viento.innerHTML = Math.floor(data.wind.speed * 3.6) + "Km/h"; //multiplico por 3.6 ya que lo recibo en metros por segundo
